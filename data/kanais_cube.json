@@ -1,0 +1,41 @@
+{
+  "Weapon": [
+    {
+      "name": "Augustine's Panacea",
+      "effect": {
+        "en": [
+          "Elemental Arrow gains an effect based on the rune:",
+          "Ball Lightning now travels at 30% speed.",
+          "Frost Arrow damage and Chilled duration increased by200-250%",
+          "Immolation Arrow ground damage over time increased by200-250%",
+          "Lightning Bolts damage and Stun duration increased by200-250%",
+          "Nether Tentacles damage and healing amount increased by200-250%"
+        ],
+        "jp": [
+          "Elemental Arrowにルーンに応じた効果が追加されました。",
+          "Ball Lightningの移動速度が30%上昇する。",
+          "Frost ArrowのダメージとChilledの持続時間が200-250%増加。",
+          "Immolation Arrowの地上ダメージの時間が200-250%増加。",
+          "Lightning Boltsのダメージとスタンの効果時間が200-250%増加。",
+          "Nether Tentaclesのダメージと回復量が200-250%増加する。"
+        ]
+      }
+    },
+    {
+      "name": "Azurewrath",
+      "effect": {
+        "en": "",
+        "jp": ""
+      }
+    },
+    {
+      "name": "Bombardier's Rucksack",
+      "effect": {
+        "en": "",
+        "jp": ""
+      }
+    }
+  ],
+  "Armor": [],
+  "Jewelry": []
+}
