@@ -3,23 +3,28 @@ import { type KanaisCubeData, KanaisCategory } from '@/data/types';
 // @ts-ignore
 import kanaisCubeData from '/data/kanais_cube.json';
 
-const KanaisCube = (category: KanaisCategory) => {
-  const data = kanaisCubeData[category] as KanaisCubeData[typeof category];
+type Props = {
+  data: KanaisCubeData[KanaisCategory];
+};
 
-  console.log({ data });
-  return (
-    <ul>
-      {data.map((item) => {
-        return (
-          <li>
-            <h3>{item.name}</h3>
-            <p>{item.effect.en}</p>
-            <p>{item.effect.jp}</p>
-          </li>
-        );
-      })}
-    </ul>
-  );
+const Component: React.FC<Props> = (props) => (
+  <ul>
+    {props.data.map((item) => {
+      return (
+        <li>
+          <h3>{item.name}</h3>
+          <p>{item.effect.en?.join('\n')}</p>
+          <p>{item.effect.jp}</p>
+        </li>
+      );
+    })}
+  </ul>
+);
+
+const KanaisCube = (category: KanaisCategory) => {
+  const data = kanaisCubeData[category] as KanaisCubeData[KanaisCategory];
+
+  return <Component data={data} />;
 };
 
 export const KanaisCubeWeapon: React.FC = () => KanaisCube('Weapon');
